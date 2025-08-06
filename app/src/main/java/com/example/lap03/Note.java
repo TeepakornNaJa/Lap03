@@ -1,18 +1,34 @@
 package com.example.lap03;
 
-import java.util.Date;
-
-public class Note {
+public abstract class Note {
     //Attribute
     String title;
     String context;
     String createdDate;
 
-    //Method
-    void getSummary(){
-    System.out.println(title);
-    System.out.println(context);
-    System.out.println(createdDate);
+    //getter
+    public String getTitle(){
+        return title;
     }
-
+    public String getContext() {
+        return context;
+    }
+    public String getCreatedDate() {
+        return createdDate;
+    }
+    //setter
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public void setContext(String context){
+        this.context = context;
+    }
+    public void setCreatedDate(String createdDate){
+        this.createdDate = createdDate;
+    }
+    //Method
+    public abstract String getSummary();
 }
+
+
+
