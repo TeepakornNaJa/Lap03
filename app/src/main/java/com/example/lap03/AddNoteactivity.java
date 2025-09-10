@@ -14,14 +14,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.Date;
-
 public class AddNoteactivity extends AppCompatActivity {
 
     Button BackButton;
     Button addButton;
     EditText titile,textContent;
     TextView display;
+    EditText editName;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,6 +33,8 @@ public class AddNoteactivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
         BackButton = findViewById(R.id.button3);//event source
         BackButton.setOnClickListener(new View.OnClickListener() {//event listener
             @Override
@@ -44,10 +45,15 @@ public class AddNoteactivity extends AppCompatActivity {
                 startActivity(back);
             }
         });
+
+
+
         addButton = findViewById(R.id.button2);
-        titile = findViewById(R.id.editTextText);
-        textContent = findViewById(R.id.editTextText2);
+        titile = findViewById(R.id.editTextName);
+        textContent = findViewById(R.id.editText3);
         display = findViewById(R.id.textView2);
+       editName = findViewById(R.id.editTextName);
+
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,15 +62,21 @@ public class AddNoteactivity extends AppCompatActivity {
                 //get data from user (EditText)
                 String strOfTitile  = titile.getText().toString();
                 String strOfContent = textContent.getText().toString();
-                String strOfData = new Date().toString();
+                //String strOfData = new Date().toString();
+                String strOfName = editName.getText().toString();
+
 
                 //set data to textNote class
                 TextNote note1 = new TextNote();
+
                 note1.setTitle(strOfTitile);
 
                 note1.setTextContent(strOfContent);
 
-                note1.createdDate = strOfData;
+//                note1.createdDate = strOfData;
+
+
+
 
                 //show note on TextView
                 display.setText(note1.getSummary());
@@ -72,6 +84,20 @@ public class AddNoteactivity extends AppCompatActivity {
             }
 
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
