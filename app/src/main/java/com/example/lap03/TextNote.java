@@ -16,7 +16,6 @@ public class TextNote extends Note {
 
     //Method
     public String getSummary(){
-        return String.format("%s: %s (%s)",title, textContent, createdDate);
         //System.out.prinln(title + ": " + textContent + " (" + createdDate + ")");
     }
 

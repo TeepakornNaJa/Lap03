@@ -1,32 +1,18 @@
 package com.example.lap03;
 
+import java.util.Date;
+
 public class Note {
-     String createdDate;
-     String title;
-     String content;
-     boolean isChecklist;
-     User owner;
+    //Attribute
+    String title;
+    String context;
+    String createdDate;
 
-    public Note(String title, String content, boolean isChecklist, User owner) {
-        this.title = title;
-        this.content = content;
-        this.isChecklist = isChecklist;
-        this.owner = owner;
+    //Method
+    void getSummary(){
+    System.out.println(title);
+    System.out.println(context);
+    System.out.println(createdDate);
     }
 
-    public Note() {
-    }
-
-    public String getTitle() { return title; }
-    public String getContent() { return content; }
-    public boolean isChecklist() { return isChecklist; }
-    public User getOwner() { return owner; }
-
-    public void setTitle(String strOfTitile) {
-    }
 }
-
-
-
-
-
