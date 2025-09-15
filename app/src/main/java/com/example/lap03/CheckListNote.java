@@ -14,6 +14,7 @@ public class CheckListNote extends Note {
         this.items = items;
     }
 
+
     public String getSummary() {
         String strItems = "";
         int noOfList = items.size();
@@ -23,4 +24,6 @@ public class CheckListNote extends Note {
         //return title+":"+strItems+"("+createdDate+")";
         return title+":"+items.get(0)+"("+createdDate+")";
     }
+
+
 }
