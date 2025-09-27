@@ -22,6 +22,12 @@ public class NoteEntity {
 
     public Date createdDate;
 
+    public NoteEntity(String title, String content, String createdDate, String type) {
+        this.title = title;
+        this.content = content;
+        this.type = type;
+    }
+
     public NoteEntity(@NonNull String title, @NonNull String type, String checklistItemsJson, String content, Date createdDate) {
         this.title = title;
         this.type = type;

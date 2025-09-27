@@ -45,4 +45,10 @@ public class TextNote {
     public String getTextContent() {
         return "";
     }
+
+    public char[] getTitle() {
+
+        return new char[0];
+    }
 }
+
